@@ -4,7 +4,7 @@ This repo is an experimentation of using WASM modules with a shared component in
 
 ## Features
 
-- Shared component interface defined in the [WIT](https://github.com/WebAssembly/component-model/blob/main/design/mvp/WIT.md) format.
+- Shared component interface defined in the [WIT](https://github.com/WebAssembly/component-model/blob/main/design/mvp/WIT.md) format. (`wit/handler.wit`)
   - Plugins load the component interface via [wit-bindgen](https://github.com/bytecodealliance/wit-bindgen) which enforces the implementation of the _guest_ side of the component
   - Hosts load the interface via [wasmtime](https://docs.rs/wasmtime/9.0.1/wasmtime/component/macro.bindgen.html) which enforces the implementation of the _host_ side of the component
   - The plugin and server and currently both implemented in Rust, but the interface is language agnostic. As long as the WASM component module confirms to the WIT format, it can be used by as a handler.
