@@ -9,3 +9,5 @@ edition = "2021"
 wasmtime = { version = "9.0.1", features = ["component-model"] }
 wasmtime-wasi = "9.0.1"
 wit-bindgen = { git = "https://github.com/bytecodealliance/wit-bindgen", version = "0.6.0" }
+actix-web = "4"
+anyhow = "1.0.71"

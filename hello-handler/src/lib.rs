@@ -6,7 +6,7 @@ impl Handler for MyHandler {
     fn run() -> wit_bindgen::rt::string::String {
         // log("Hello from rust!");
 
-        "yoo".into()
+        "I am a string in the WASM module".into()
     }
 }
 
