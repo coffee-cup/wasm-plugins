@@ -37,7 +37,7 @@ The handlers are also dynamically loaded on each request, which means you can ch
 _Note: Documentation for a lot of these libraries/tools is very sparse and often outdated. I've tried to compile a list of resources here, but use at your own risk._
 
 - [Introduction to WebAssembly components](https://radu-matei.com/blog/intro-wasm-components/)
-  - All of Radu's blog posts on wasm are great (even of 2-3 years old and often outdated)
+  - All of Radu's blog posts on wasm are great (even if 2-3 years old and often outdated)
 - [WIT Bindgen](https://github.com/bytecodealliance/wit-bindgen)
 - [Wasmtime crate](https://docs.rs/wasmtime/latest/wasmtime/index.html)
 - [WIT spec](https://github.com/WebAssembly/component-model/blob/main/design/mvp/WIT.md)
