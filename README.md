@@ -29,6 +29,7 @@ The handlers are also dynamically loaded on each request, which means you can ch
 - Re-use the execution engine so we are not re-creating it for each request
 - Dynamically register handlers while the server is already running (possible with a request to POST /handler)
 - Implement a handler in a non-Rust language
+- See what a host in JS looks like
 
 ## Resources
 
