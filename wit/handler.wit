@@ -1,0 +1,9 @@
+interface handler-api {
+  get-route: func() -> string
+}
+
+default world handler {
+  import host: self.handler-api
+
+  export run: func() -> string
+}
