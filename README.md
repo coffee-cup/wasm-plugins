@@ -29,7 +29,8 @@ The handlers are also dynamically loaded on each request, which means you can ch
 - Re-use the execution engine so we are not re-creating it for each request
 - Dynamically register handlers while the server is already running (possible with a request to POST /handler)
 - Implement a handler in a non-Rust language
-- See what a host in JS looks like
+- See what a host and plugin in JS looks like
+  - How cool would it be to have a web server and each of the route handlers be implemented in a different language!
 
 ## Resources
 
@@ -42,3 +43,5 @@ _Note: Documentation for a lot of these libraries/tools is very sparse and often
 - [WIT spec](https://github.com/WebAssembly/component-model/blob/main/design/mvp/WIT.md)
 - [WebAssembly binary toolkit](https://github.com/WebAssembly/wabt)
 - [WASI preview1 spec](https://github.com/WebAssembly/WASI/blob/main/legacy/preview1/docs.md)
+
+I've also been saving a ton of links related to wasm in my [bookmarks](https://jakerunzer.com/bookmarks/wasm).
