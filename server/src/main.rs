@@ -6,8 +6,6 @@ use wasmtime::{Config, Engine, Store};
 
 bindgen!("handler" in "../wit");
 
-use host::*;
-
 /// State available to the WASM module handler implementation
 struct State {
     route: String,
@@ -15,7 +13,7 @@ struct State {
 
 /// Implementation of the handler-api interface
 /// See `wit/handler.wit` for the interface definition
-impl Host for State {
+impl host::Host for State {
     fn get_route(&mut self) -> wasmtime::Result<String> {
         Ok(self.route.clone())
     }
@@ -106,27 +104,3 @@ async fn main() -> std::io::Result<()> {
         }
     }
 }
-
-// fn run_wasm(module: &str, route: &str) -> Result<()> {
-//     let mut config = Config::new();
-//     config.wasm_component_model(true);
-//     let engine = Engine::new(&config)?;
-
-//     let mut linker = Linker::new(&engine);
-//     Handler::add_to_linker(&mut linker, |state: &mut State| state)?;
-
-//     let mut store = Store::new(
-//         &engine,
-//         State {
-//             route: route.into(),
-//         },
-//     );
-
-//     let component = Component::from_file(&engine, "handlers/hello-handler.wasm")?;
-//     let (bindings, _) = Handler::instantiate(&mut store, &component, &linker)?;
-
-//     let res = bindings.call_run(&mut store)?;
-//     println!("Got result {}", res);
-
-//     Ok(())
-// }

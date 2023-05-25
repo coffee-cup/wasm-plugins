@@ -6,7 +6,8 @@ impl Handler for MyHandler {
     fn run() -> wit_bindgen::rt::string::String {
         // log("Hello from rust!");
 
-        "I am a string in the WASM module".into()
+        let route = host::get_route();
+        format!("I am a string in the WASM module\nRoute: {}", route)
     }
 }
 
