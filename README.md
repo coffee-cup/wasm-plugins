@@ -30,4 +30,14 @@ The handlers are also dynamically loaded on each request, which means you can ch
 - Dynamically register handlers while the server is already running (possible with a request to POST /handler)
 - Implement a handler in a non-Rust language
 
+## Resources
+
 _Note: Documentation for a lot of these libraries/tools is very sparse and often outdated. I've tried to compile a list of resources here, but use at your own risk._
+
+- [Introduction to WebAssembly components](https://radu-matei.com/blog/intro-wasm-components/)
+  - All of Radu's blog posts on wasm are great (even of 2-3 years old and often outdated)
+- [WIT Bindgen](https://github.com/bytecodealliance/wit-bindgen)
+- [Wasmtime crate](https://docs.rs/wasmtime/latest/wasmtime/index.html)
+- [WIT spec](https://github.com/WebAssembly/component-model/blob/main/design/mvp/WIT.md)
+- [WebAssembly binary toolkit](https://github.com/WebAssembly/wabt)
+- [WASI preview1 spec](https://github.com/WebAssembly/WASI/blob/main/legacy/preview1/docs.md)
